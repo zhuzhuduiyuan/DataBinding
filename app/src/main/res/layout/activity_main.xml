@@ -7,6 +7,10 @@
         <variable
             name="userInput"
             type="String"/>
+
+        <variable
+            name="second"
+            type="String"/>
     </data>
 
     <RelativeLayout
@@ -15,20 +19,30 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_one"
+            android:id="@+id/tv_new"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="@{userInput}"/>
+            android:text="@{userInput + second}"
+            android:layout_centerHorizontal="true"/>
 
         <EditText
             android:id="@+id/et_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@={userInput}"
-            android:layout_below="@id/tv_one"
+            android:layout_below="@id/tv_new"
             android:layout_centerHorizontal="true"
-            android:hint="输入"/>
+            android:hint="输入一"
+            android:text="@={userInput}"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_one"
+            android:hint="输入二"
+            android:layout_centerHorizontal="true"
+            android:text="@={second}"
+            />
+
     </RelativeLayout>
 </layout>
 
